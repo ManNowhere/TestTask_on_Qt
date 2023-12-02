@@ -4,7 +4,7 @@
 
 QImageWidget::QImageWidget(QWidget *parent) : QWidget(parent)
 {
-    _originImage = QPixmap("../pic.png");
+    _originImage = QPixmap("pic.png");
     _backColor = Qt::blue;
     connect (this, SIGNAL(pixmapChainged()), SLOT(repaint()));
 
@@ -23,7 +23,7 @@ void QImageWidget::setPixmap(QPixmap pixmap)
 
 void QImageWidget::setSize(int number)
 {
-    QPixmap temp = QPixmap("../pic.png");
+    QPixmap temp = QPixmap("pic.png");
     switch (number) {
     case 0:
         _originImage = temp;
